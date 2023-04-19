@@ -1,0 +1,54 @@
+.my-task {
+    padding: 8px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.my-task input {
+    display: none;
+}
+
+.my-task label {
+    margin-left: 60px;
+    height: 100%;
+    position: relative;
+    display: grid;
+    place-content: center;
+}
+
+.my-task label::before {
+    content: '';
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: -18px;
+    top: 50%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    transform: translate(-100%, -50%);
+    border: 2px solid white;
+    box-sizing: border-box;
+    
+    transition: border 150ms ease-in;
+
+}
+
+.my-task input:checked ~ label::before {
+    margin: 0;
+    padding: 0;
+    border: 15px solid white;
+}
+
+.my-task .btn.delete {
+    margin-left: auto;
+    background-color: rgb(193, 63, 63);
+    flex: 0 0 120px;
+    height: 100%;
+    appearance: none;
+    border: none
+}
