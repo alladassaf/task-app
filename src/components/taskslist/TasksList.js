@@ -22,7 +22,7 @@ function TasksList({tasks, deleteTask, setTasks}) {
         {tasks.map((task, ind) => {
             return (<div className="my-task" key={ind + 1}>
                         <input type="checkbox" checked={task.complete} id={`task${ind + 1}`} onChange={(e) => changeCompleteness(task.id, e.target.checked)}/>
-                        <label htmlFor={`task${ind + 1}`}>{`${task.content} for ${task.id}`}</label>
+                        <label htmlFor={`task${ind + 1}`}>{`${task.content}`}</label>
                         <button className="btn delete" onClick={() => deleteTask(ind + 1)}>DELETE</button>
                     </div>)
         })}
